@@ -173,66 +173,65 @@ export default function PricingSection() {
             </TabsContent>
 
             {/* Annual Plans */}
-            <TabsContent value="annually"> 
+            <TabsContent value="annually">
               <div className="grid gap-6 lg:grid-cols-4 lg:gap-8">
                 {[
-  {
-    name: "Free",
-    price: "₹0",
-    description: "Try Zordie for free",
-    features: [
-      "2 job posts",
-      "Basic AI screening",
-      "10 verified applications",
-      "Candidate assessments",
-      "Prime AI assistance",
-      "Advanced analytics",
-    ],
-    cta: "Get Started",
-  },
-  {
-    name: "Growth Plan",
-    price: "₹99,999",
-    description: "For growing teams",
-    features: [
-      "Allows up to 25 Job Postings monthly",
-      "Includes 5,000 AI Credits for extensive candidate evaluations",
-      "Advanced analytics dashboard with customized reporting",
-      "Priority email and chat support",
-    ],
-    cta: "Choose Growth",
-    popular: true,
-  },
-  {
-    name: "Starter Plan",
-    price: "₹49,999",
-    description: "For small startups",
-    features: [
-      "Up to 10 Job Postings per month",
-      "Includes 1,000 AI Credits for candidate assessments and analytics",
-      "Access to basic dashboard and reporting features",
-      "Email support for quick assistance",
-    ],
-    cta: "Choose Starter",
-  },
-  
-  {
-    name: "Enterprise",
-    price: "Custom",
-    description: "Tailored for large organizations",
-    features: [
-      "Unlimited job posts",
-      "Custom integrations",
-      "Dedicated account manager",
-      "Custom AI training",
-      "Pay as You Go model",
-      "Tailored pricing",
-      "Phone & priority support",
-    ],
-    cta: "Contact Sales",
-  },
-]
-.map((plan, i) => (
+                  {
+                    name: "Free",
+                    price: "₹0",
+                    description: "Try Zordie for free",
+                    features: [
+                      "2 job posts",
+                      "Basic AI screening",
+                      "10 verified applications",
+                      "Candidate assessments",
+                      "Prime AI assistance",
+                      "Advanced analytics",
+                    ],
+                    cta: "Get Started",
+                  },
+                  {
+                    name: "Growth Plan",
+                    price: "₹99,999",
+                    description: "For growing teams",
+                    features: [
+                      "Allows up to 25 Job Postings monthly",
+                      "Includes 5,000 AI Credits for extensive candidate evaluations",
+                      "Advanced analytics dashboard with customized reporting",
+                      "Priority email and chat support",
+                    ],
+                    cta: "Choose Growth",
+                    popular: true,
+                  },
+                  {
+                    name: "Starter Plan",
+                    price: "₹49,999",
+                    description: "For small startups",
+                    features: [
+                      "Up to 10 Job Postings per month",
+                      "Includes 1,000 AI Credits for candidate assessments and analytics",
+                      "Access to basic dashboard and reporting features",
+                      "Email support for quick assistance",
+                    ],
+                    cta: "Choose Starter",
+                  },
+
+                  {
+                    name: "Enterprise",
+                    price: "Custom",
+                    description: "Tailored for large organizations",
+                    features: [
+                      "Unlimited job posts",
+                      "Custom integrations",
+                      "Dedicated account manager",
+                      "Custom AI training",
+                      "Pay as You Go model",
+                      "Tailored pricing",
+                      "Phone & priority support",
+                    ],
+                    cta: "Contact Sales",
+                  },
+                ].map((plan, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, y: 20 }}
