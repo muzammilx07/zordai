@@ -36,8 +36,16 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2 font-bold">
-          <div className="size-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">S</div>
-          <Link to='/'>SaaSify</Link>
+         <div className="flex items-center space-x-2">
+  <div className="size-8 rounded-lg  text-white flex items-center justify-center  bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
+    Z
+  </div>
+  <Link to="/" className="flex items-baseline text-blue-900 font-bold">
+    <span className="text-xl">ZordAI</span>
+    <span className="text-sm ml-1 font-normal tracking-wide">HIRE</span>
+  </Link>
+</div>
+
         </div>
 
         {/* Desktop nav */}

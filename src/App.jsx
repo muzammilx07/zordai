@@ -9,6 +9,8 @@ import Features from './pages/Features';
 import Pricing from './pages/Pricing';
 import Login from './pages/Login';
 import GetStarted from './pages/GetStarted';
+import Footer from './components/Footer';
+import SignUp from './pages/Signup';
 
 function App() {
   return (
@@ -23,10 +25,11 @@ function App() {
       <Route path="/features" element={<Features />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
       <Route path="/get-started" element={<GetStarted />} />
     </Routes>
     </>
+    <Footer/>
     </>
       
 

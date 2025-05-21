@@ -10,6 +10,7 @@ module.exports = {
     "*.{js,jsx,mdx}",
   ],
   theme: {
+    
     container: {
       center: true,
       padding: "2rem",

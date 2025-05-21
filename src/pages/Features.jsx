@@ -1,8 +1,16 @@
+
+import AiHiringFeatures from "../components/AiHiringFeatures";
+import FeatureHero from "../components/FeatureHero";
+import FeatureTestimonial from "../components/FeatureTestimonilas";
+import PlatfromFeatures from "../ui/platformfeatures";
+
 export default function Features() {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold">Features</h1>
-      <p>Discover our platform features.</p>
-    </div>
+    <>
+    <FeatureHero/>
+    <PlatfromFeatures/>
+    <AiHiringFeatures/>
+    <FeatureTestimonial/>
+    </>
   );
 }
