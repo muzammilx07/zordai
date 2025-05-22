@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";'
-'
+@import "slick-carousel/slick/slick-theme.css";
+
 @keyframes grid {
   0% {
     transform: rotateX(var(--grid-angle)) translateY(0);

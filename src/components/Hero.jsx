@@ -8,8 +8,8 @@ import { ContainerScroll } from "../ui/containerscroll";
 
 export default function Hero() {
   return (
-    <section className="w-full pt-10 md:pt-22 lg:pt-20 overflow-hidden bg-background text-foreground">
-      <div className="container mx-auto relative">
+    <section className="w-full pt-10 md:pt-22 lg:pt-20 overflow-hidden bg-background text-foreground ">
+      <div className="container  mx-auto relative">
 
         {/* Background Grid */}
         <section className="grid grid-cols-20 h-[60vh] bg-white overflow-clip mx-auto pointer-events-auto">
