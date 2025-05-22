@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 const LogoMarquee = ({ logos, speed = 70 }) => (
-  <div className="w-full bg-[#f9fafb] py-3">
-    <div className="max-w-5xl mx-auto px-4">
+  <div className="w-full  py-6">
+    <div className="max-w-6xl mx-auto px-4 ">
       
 
       {/* Marquee container */}
-      <div className="border-t border-b border-gray-300 py-6 overflow-hidden">
+      <div className="border-2 border-gray-100 py-6 overflow-hidden shadow-lg shadow-orange-500/20">
         <Marquee speed={speed} pauseOnHover gradient={false}>
           {logos.map(({ name, src }, index) => (
             <div
@@ -36,14 +36,15 @@ const LogoMarquee = ({ logos, speed = 70 }) => (
 function MarqueePage() {
   const [logos, setLogos] = useState([]);
 
-  useEffect(() => {
-    const modules = import.meta.glob("../assets/*.svg", { eager: true });
-    const logosArray = Object.entries(modules).map(([path, module]) => {
-      const name = path.split("/").pop().replace(".svg", "");
-      return { name, src: module.default };
-    });
-    setLogos(logosArray);
-  }, []);
+useEffect(() => {
+  const modules = import.meta.glob("../assets/*.{svg,png}", { eager: true });
+  const logosArray = Object.entries(modules).map(([path, module]) => {
+    const name = path.split("/").pop().replace(/\.(svg|png)$/, "");
+    return { name, src: module.default };
+  });
+  setLogos(logosArray);
+}, []);
+
 
   if (logos.length === 0) return <div>Loading...</div>;
 

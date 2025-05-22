@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
     "./src/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
@@ -10,7 +9,6 @@ module.exports = {
     "*.{js,jsx,mdx}",
   ],
   theme: {
-    
     container: {
       center: true,
       padding: "2rem",
@@ -19,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        20: "repeat(20, minmax(0, 1fr))",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -60,6 +61,15 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        keyframes: {
+                shine: {
+          '0%': { 'background-position': '100%' },
+          '100%': { 'background-position': '-100%' },
+         },
+         grid: {
+    '0%': { transform: 'rotateX(var(--grid-angle)) translateY(-50%)' },
+    '100%': { transform: 'rotateX(var(--grid-angle)) translateY(0)' },
+  },
         "accordion-down": {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -70,8 +80,10 @@ module.exports = {
         },
       },
       animation: {
+        grid: 'grid 15s linear infinite',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shine: 'shine 5s linear infinite',
       },
     },
   },

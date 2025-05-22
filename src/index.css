@@ -5,7 +5,20 @@
 @tailwind utilities;
 
 @import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
+@import "slick-carousel/slick/slick-theme.css";'
+'
+@keyframes grid {
+  0% {
+    transform: rotateX(var(--grid-angle)) translateY(0);
+  }
+  100% {
+    transform: rotateX(var(--grid-angle)) translateY(calc(var(--cell-size) * 2));
+  }
+}
+
+.animate-retro-grid {
+  animation: grid 20s linear infinite;
+}
 
 
 @layer base {
