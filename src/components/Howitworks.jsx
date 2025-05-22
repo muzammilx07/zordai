@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Badge } from "../ui/badge";
+import { AnimatedBeamMultipleOutputDemo } from "./AnimatedBeamM";
 
 export default function ScreeningFlowSection() {
   return (
@@ -26,43 +27,9 @@ export default function ScreeningFlowSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12 relative">
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2 z-0" />
-
-          {[
-            {
-              step: "01",
-              title: "Document Analysis",
-              description: "Advanced AI scans and verifies resume content against multiple data sources.",
-            },
-            {
-              step: "02",
-              title: "Credential Verification",
-              description: "Authentication of certifications, degrees, and professional qualifications.",
-            },
-            {
-              step: "03",
-              title: "Skill Assessment",
-              description: "Objective validation of technical and soft skills through adaptive testing.",
-            },
-          ].map((step, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative z-10 flex flex-col items-center text-center space-y-4"
-            >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/70 text-primary-foreground text-xl font-bold shadow-lg">
-                {step.step}
-              </div>
-              <h3 className="text-xl font-bold">{step.title}</h3>
-              <p className="text-muted-foreground">{step.description}</p>
-            </motion.div>
-          ))}
-        </div>
+       
       </div>
+      <AnimatedBeamMultipleOutputDemo/>
     </section>
   );
 }

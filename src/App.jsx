@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import GetStarted from './pages/GetStarted';
 import Footer from './components/Footer';
 import SignUp from './pages/Signup';
+import { SmoothCursor } from './ui/SmoothCursor';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
     </Routes>
     </>
     <Footer/>
+    <SmoothCursor/>
     </>
       
 
